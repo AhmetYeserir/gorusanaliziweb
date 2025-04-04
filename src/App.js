@@ -1,24 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"; // Switch yerine Routes kullanıyoruz
+import Header from "./components/Header"; // Header componenti
+import Home from "./pages/Home"; // Ana sayfa componenti
+import About from "./pages/About"; // Hakkında sayfası
+import Team from "./pages/Team"; // Proje ekibi sayfası
+import Calendar from "./pages/Calendar"; // Proje takvimi sayfası
+import Publications from "./pages/Publications"; // Yayınlar sayfası
+import Lab from "./pages/Lab"; // Laboratuvar sayfası
+import Contact from "./pages/Contact"; // İletişim sayfası
+import './i18n';
+import { useTranslation } from 'react-i18next';
 
 function App() {
+  const { t } = useTranslation();
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      {/* Header, her sayfada üstte olacak */}
+      <Header />
+      <Routes>
+        {/* Ana Sayfa */}
+        <Route path="/" element={<Home />} />
+        {/* Diğer Sayfalar */}
+        <Route path="/about" element={<About />} />
+        <Route path="/team" element={<Team />} />
+        <Route path="/calendar" element={<Calendar />} />
+        <Route path="/publications" element={<Publications />} />
+        <Route path="/lab" element={<Lab />} />
+        <Route path="/contact" element={<Contact />} />
+        {/* 404 Sayfa */}
+        <Route path="*" element={<h1>Sayfa Bulunamadı!</h1>} />
+      </Routes>
+    </Router>
   );
 }
 

@@ -1,0 +1,237 @@
+/* Ana Konteyner */
+.team-unicorn-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 20px;
+    font-family: 'Winky Sans', sans-serif;
+    background: linear-gradient(to bottom, #f9f9ff 0%, #ffffff 100%);
+  }
+  
+  /* Başlık Bölümü */
+  .team-rainbow-header {
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+  }
+  
+  .team-sparkle-title {
+    font-size: 3rem;
+    color: #D9534F;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+    position: relative;
+    display: inline-block;
+  }
+  
+  .team-sparkle-title::after {
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #D9534F, #3876b8);
+    border-radius: 2px;
+  }
+  
+  .team-crystal-text {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  /* Ekip Üyeleri Grid */
+  .team-galaxy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin: 60px 0;
+  }
+  
+  .team-comet-card {
+    background: white;
+    border-radius: 12px;
+    padding: 40px 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-align: center;
+    border-top: 5px solid #3876b8;
+  }
+  
+  .team-comet-card:hover {
+    transform: translateY(-15px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+  }
+  
+  .team-astro-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+    overflow: hidden;
+    border: 5px solid #f0f0f0;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+  
+  .team-nasa-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+  
+  .team-comet-card:hover .team-nasa-image {
+    transform: scale(1.1);
+  }
+  
+  .team-supernova-name {
+    font-size: 1.5rem;
+    color: #3876b8;
+    margin-bottom: 8px;
+    font-weight: 700;
+  }
+  
+  .team-starlight-title {
+    color: #D9534F;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+  }
+  
+  .team-starlight-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 2px;
+    background: #D9534F;
+  }
+  
+  .team-meteor-bio {
+    color: #666;
+    line-height: 1.7;
+    font-size: 0.95rem;
+  }
+  
+  /* Logo Bölümü */
+  .team-milkyway-partners {
+    margin-top: 100px;
+    text-align: center;
+  }
+  
+  .team-blackhole-title {
+    font-size: 2rem;
+    color: #3876b8;
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .team-partners-divider {
+    height: 3px;
+    width: 100px;
+    background: linear-gradient(90deg, #D9534F, #3876b8);
+    margin: 0 auto 40px;
+    border-radius: 3px;
+  }
+  
+  .team-quasar-logos {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 0 20px;
+  }
+  
+  .team-partner-logo {
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 220px;
+    height: 150px;
+  }
+  
+  .team-partner-logo:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  }
+  
+  .team-logo-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(30%);
+    transition: all 0.3s ease;
+  }
+  
+  .team-partner-logo:hover .team-logo-image {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+  }
+  
+  /* Responsive Tasarım */
+  @media (max-width: 992px) {
+    .team-galaxy-grid {
+      gap: 30px;
+    }
+    
+    .team-astro-photo {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .team-sparkle-title {
+      font-size: 2.5rem;
+    }
+    
+    .team-galaxy-grid {
+      grid-template-columns: 1fr;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .team-quasar-logos {
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+    }
+    
+    .team-partner-logo {
+      width: 80%;
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .team-sparkle-title {
+      font-size: 2.2rem;
+    }
+    
+    .team-astro-photo {
+      width: 140px;
+      height: 140px;
+    }
+    
+    .team-comet-card {
+      padding: 30px 20px;
+    }
+    
+    .team-partner-logo {
+      height: 120px;
+    }
+  }

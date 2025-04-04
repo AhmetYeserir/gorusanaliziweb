@@ -1,0 +1,13 @@
+footer {
+    background-color: #f9f9f9; /* Arka plan rengi */
+    padding: 20px 0; /* Üst ve alt padding */
+    text-align: center; /* Metni ortaya alıyoruz */
+    font-size: 14px; /* Yazı boyutunu ayarlıyoruz */
+    color: #333; /* Yazı rengi */
+    border-top: 1px solid #ddd; /* Üst sınır için hafif çizgi */
+  }
+  
+  footer p {
+    margin: 0; /* Margin sıfırlıyoruz */
+  }
+  

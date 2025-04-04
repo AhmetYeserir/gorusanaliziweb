@@ -1,0 +1,316 @@
+/* Header.css */
+/* Winky Sans Fontunu Kullanma */
+body {
+  font-family: "Winky Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Top Bar Styles */
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #F7F7F7;
+  color: #F7F7F7;
+  padding: 10px 60px;
+  font-size: 16px;
+  gap: 10px;
+  position: relative;
+  z-index: 1001;
+}
+
+.contact-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.contact-info i {
+  color: #3876b8;
+  cursor: pointer;
+}
+
+.phone-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+  color: #333;
+}
+
+.phone-number {
+  font-size: 16px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.divider {
+  border-left: 1px solid #ccc;
+  height: 30px;
+  margin: 0 5px;
+  align-self: center;
+}
+
+/* Language Dropdown */
+.language-dropdown-container {
+  position: relative;
+  margin-right: 0px;
+}
+
+.language {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 5px 0px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.language:hover {
+  background-color: #f0f0f0;
+}
+
+.language i.fa-globe {
+  color: #3876b8;
+  font-size: 18px;
+}
+
+.language-text {
+  color: #333;
+  font-size: 16px;
+  margin-right: 0px;
+}
+
+.language i.fa-caret-down {
+  color: #3876b8;
+  font-size: 14px;
+  transition: transform 0.2s;
+}
+
+.language-select {
+  position: absolute;
+  background: white;
+  top: 100%;
+  right: 0;
+  width: 80px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1002;
+  list-style: none;
+  padding: 0;
+  margin: 5px 0 0 0;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.language-select li {
+  padding: 10px;
+  cursor: pointer;
+  text-align: center;
+  color: #333;
+  transition: background-color 0.2s;
+  position: relative;
+}
+
+.language-select li.active {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
+.language-select li.active::after {
+  content: "✓";
+  position: absolute;
+  right: 10px;
+  color: #3876b8;
+}
+
+.language-select li:hover {
+  background-color: #f1f1f1;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  padding: 15px 40px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  margin-left: 80px;
+  flex-grow: 1;
+  height: 60px;
+  gap: 15px;
+}
+
+.logo {
+  height: 85px; /* Sabit bir yükseklik veriyoruz */
+  width: auto;
+  transition: all 0.3s ease;
+}
+.logo-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 15px;
+  position: relative;
+}
+
+.logo-main-text {
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  color: #555;
+  line-height: 1;
+  text-transform: uppercase;
+  width: max-content; /* İçerik genişliğinde */
+}
+
+.logo-sub-text {
+  font-size: 13px;
+  color: #777;
+  font-weight: 400;
+  margin-top: 4px;
+  letter-spacing: 0.3px;
+  position: relative;
+  left: 50%; /* Yatayda 50% kaydır */
+  transform: translateX(-50%); /* Kendi genişliğinin yarısı kadar geri çek */
+  width: max-content; /* İçerik genişliğinde */
+  text-align: center; /* Metni ortala */
+}
+
+/* Sol çizgi için (opsiyonel) */
+.logo-text::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 5px;
+  bottom: 5px;
+  width: 2px;
+  background-color: #ddd;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 992px) {
+  .logo-main-text {
+    font-size: 20px;
+  }
+  .logo-sub-text {
+    font-size: 12px;
+  }
+}
+
+/* Navigation Styles */
+.nav ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav ul li {
+  position: relative;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: #D9534F;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 12px 20px;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.menu-item:hover {
+  color: white;
+  background-color: #D9534F;
+}
+
+/* Dropdown Styles */
+.dropdown:hover .dropdown-menu {
+  display: flex;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #D9534F;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+  min-width: 200px;
+  z-index: 1000;
+  display: none;
+  flex-direction: column;
+  padding: 0;
+}
+
+.dropdown-item {
+  color: white;
+  padding: 12px 20px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+}
+
+.dropdown-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 20px;
+  right: 20px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+    padding: 8px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .logo-container {
+    margin-left: 0;
+    justify-content: center;
+  }
+
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+  }
+
+  .language-select {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}

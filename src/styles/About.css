@@ -1,0 +1,323 @@
+.about-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    font-family: 'Winky Sans', sans-serif;
+    color: #333;
+    line-height: 1.7;
+  }
+  
+  .about-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .about-title {
+    font-size: 2.8rem;
+    color: #D9534F;
+    margin-bottom: 10px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .about-subtitle {
+    font-size: 1.2rem;
+    color: #3876b8;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+  
+  .title-underline {
+    width: 120px;
+    height: 5px;
+    background: linear-gradient(90deg, #D9534F, #3876b8);
+    margin: 20px auto;
+    border-radius: 3px;
+  }
+  
+  .project-card {
+    background-color: #f9f9f9;
+    border-left: 5px solid #D9534F;
+    padding: 40px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    border-radius: 5px;
+  }
+  
+  .project-title {
+    font-size: 1.8rem;
+    color: #3876b8;
+    margin-bottom: 30px;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 600;
+  }
+  
+  .project-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+  }
+  
+  .detail-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  }
+  
+  .detail-icon {
+    font-size: 1.8rem;
+    margin-top: 3px;
+  }
+  
+  .detail-label {
+    font-weight: 700;
+    color: #D9534F;
+    font-size: 0.95rem;
+    margin-bottom: 5px;
+  }
+  
+  .detail-value {
+    color: #555;
+    font-size: 1.05rem;
+  }
+  
+  .project-description {
+    background: white;
+    padding: 40px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+  
+  .description-section {
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    color: #3876b8;
+    margin: 40px 0 25px;
+    font-size: 1.5rem;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #eee;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  .purpose-title {
+    margin-top: 0px;
+  }
+  
+  .section-icon {
+    font-size: 1.3em;
+  }
+  
+  .section-content {
+    margin-top: 20px;
+  }
+  
+  .feature-list {
+    padding-left: 25px;
+    margin-top: 15px;
+  }
+  
+  .feature-list li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 30px;
+  }
+  
+  .feature-list li:before {
+    content: "→";
+    color: #D9534F;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -1px;
+  }
+  
+  .technical-methods {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+  }
+  
+  .method-card {
+    background: #f5f9ff;
+    padding: 25px;
+    border-radius: 5px;
+    border-top: 3px solid #3876b8;
+  }
+  
+  .method-title {
+    color: #D9534F;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+  }
+  
+  .expected-outcomes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+  }
+  
+  .outcome-card {
+    background: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+    border-top: 3px solid #D9534F;
+  }
+  
+  .outcome-header {
+    font-weight: 700;
+    color: #3876b8;
+    margin-bottom: 15px;
+    font-size: 1.1rem;
+    padding-bottom: 8px;
+    border-bottom: 1px dashed #ddd;
+  }
+  
+  .outcome-card ul {
+    padding-left: 20px;
+  }
+  
+  .outcome-card li {
+    margin-bottom: 10px;
+  }
+  
+  .collaboration-section {
+    background: #f0f7ff;
+    padding: 30px;
+    border-radius: 5px;
+    margin-top: 50px;
+  }
+  
+  @media (max-width: 768px) {
+    .about-title {
+      font-size: 2.2rem;
+    }
+    
+    .project-title {
+      font-size: 1.5rem;
+    }
+    
+    .project-details-grid, 
+    .technical-methods,
+    .expected-outcomes {
+      grid-template-columns: 1fr;
+    }
+    
+    .project-card, 
+    .project-description {
+      padding: 25px;
+    }
+  }
+  /* İş Birlikleri Bölümü */
+.collaboration-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9f5ff 100%);
+    padding: 40px;
+    border-radius: 10px;
+    margin-top: 60px;
+    border-left: 5px solid #3876b8;
+  }
+  
+  .partners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+  }
+  
+  .partner-card {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+    border-bottom: 3px solid transparent;
+  }
+  
+  .partner-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    border-bottom-color: #D9534F;
+  }
+  
+  .partner-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+    color: white;
+    flex-shrink: 0;
+  }
+  
+  .partner-logo.tutubitak {
+    background: linear-gradient(135deg, #2c6bb8 0%, #1a3a6e 100%);
+  }
+  
+  .partner-logo.university {
+    background: linear-gradient(135deg, #d9534f 0%, #a52822 100%);
+  }
+  
+  .partner-logo.association {
+    background: linear-gradient(135deg, #5cb85c 0%, #3a773a 100%);
+  }
+  
+  .partner-info h4 {
+    color: #3876b8;
+    margin-bottom: 8px;
+    font-size: 1.1rem;
+  }
+  
+  .partner-info p {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+    line-height: 1.4;
+  }
+  
+  .additional-partners {
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-top: 60px;
+  }
+  
+  @media (max-width: 768px) {
+    .collaboration-section {
+      padding: 25px;
+    }
+    
+    .partners-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .partner-card {
+      flex-direction: column;
+      text-align: center;
+    }
+    
+    .partner-info h4 {
+      margin-top: 15px;
+    }
+  }
