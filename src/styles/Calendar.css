@@ -1,0 +1,424 @@
+/* Ana Konteyner */
+.calendar-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3436;
+    background: linear-gradient(to bottom, #f9f9ff 0%, #ffffff 100%);
+  }
+  
+  /* Başlık Bölümü */
+  .calendar-header {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+  
+  .calendar-title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+  }
+  
+  .header-icon {
+    color: #e74c3c;
+    font-size: 2.2rem;
+  }
+  
+  .calendar-divider {
+    height: 4px;
+    width: 120px;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    margin: 0 auto 30px;
+    border-radius: 4px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  }
+  
+  .calendar-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #636e72;
+    max-width: 800px;
+    margin: 0 auto;
+    font-weight: 400;
+  }
+  
+  /* Zaman Çizelgesi */
+  .timeline-container {
+    position: relative;
+    padding: 40px 0;
+  }
+  
+  .timeline {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  
+  .timeline-item {
+    display: flex;
+    margin-bottom: 50px;
+    position: relative;
+    transition: all 0.3s ease;
+  }
+  
+  .timeline-marker {
+    position: relative;
+    z-index: 2;
+    margin-right: 30px;
+    min-width: 80px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .timeline-icon-container {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.6rem;
+    color: white;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .timeline-icon {
+    transition: transform 0.3s ease;
+  }
+  
+  .timeline-item:hover .timeline-icon {
+    transform: scale(1.1) rotate(5deg);
+  }
+  
+  .timeline-content {
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    background: white;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border-left: 5px solid #3498db;
+  }
+  
+  .timeline-item:hover .timeline-content {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+  }
+  
+  .timeline-date {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin-bottom: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+  }
+  
+  .timeline-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-weight: 700;
+  }
+  
+  .timeline-description {
+    color: #666;
+    line-height: 1.8;
+    font-size: 1.05rem;
+    margin-bottom: 20px;
+  }
+  
+  .timeline-details {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 20px 0;
+    border-left: 3px solid #3498db;
+  }
+  
+  .timeline-details h4 {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    font-size: 1.1rem;
+  }
+  
+  .timeline-details ul {
+    padding-left: 20px;
+    color: #555;
+    line-height: 1.7;
+  }
+  
+  .timeline-details li {
+    margin-bottom: 8px;
+    position: relative;
+  }
+  
+  .timeline-details li::before {
+    content: '';
+    position: absolute;
+    left: -15px;
+    top: 10px;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: #3498db;
+  }
+  
+  .timeline-status {
+    font-size: 0.95rem;
+    font-weight: 600;
+    padding: 8px 15px;
+    border-radius: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .status-icon {
+    font-size: 1.1rem;
+  }
+  
+  .spin {
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Durum Renkleri */
+  .timeline-item.completed .timeline-icon-container {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+  }
+  
+  .timeline-item.completed .timeline-status {
+    background: #e8f8f0;
+    color: #27ae60;
+  }
+  
+  .timeline-item.completed .timeline-content {
+    border-left-color: #2ecc71;
+  }
+  
+  .timeline-item.in-progress .timeline-icon-container {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+  }
+  
+  .timeline-item.in-progress .timeline-status {
+    background: #fef5e7;
+    color: #e67e22;
+  }
+  
+  .timeline-item.in-progress .timeline-content {
+    border-left-color: #f39c12;
+  }
+  
+  .timeline-item.pending .timeline-icon-container {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+  }
+  
+  .timeline-item.pending .timeline-status {
+    background: #ebf5fb;
+    color: #2980b9;
+  }
+  
+  .timeline-item.pending .timeline-content {
+    border-left-color: #3498db;
+  }
+  
+  /* İlerleme ve Gösterge */
+  .calendar-progress-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 70px;
+  }
+  
+  .calendar-progress, .calendar-legend {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  }
+  
+  .calendar-progress h3, .calendar-legend h3 {
+    color: #2c3e50;
+    margin-bottom: 25px;
+    font-size: 1.4rem;
+    text-align: center;
+  }
+  
+  .progress-stats {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 25px;
+  }
+  
+  .progress-stat {
+    text-align: center;
+  }
+  
+  .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #3498db;
+    margin-bottom: 5px;
+  }
+  
+  .stat-label {
+    color: #7f8c8d;
+    font-size: 0.95rem;
+    font-weight: 500;
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    height: 25px;
+    background: #ecf0f1;
+    border-radius: 12px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background: linear-gradient(to right, #3498db, #2ecc71);
+    border-radius: 12px;
+    position: relative;
+    transition: width 1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .progress-bar span {
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-right: 10px;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+  }
+  
+  .progress-text {
+    color: #7f8c8d;
+    font-size: 1rem;
+    text-align: center;
+    line-height: 1.6;
+  }
+  
+  .legend-items {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .legend-color {
+    width: 25px;
+    height: 25px;
+    border-radius: 6px;
+  }
+  
+  .legend-color.completed {
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+  }
+  
+  .legend-color.in-progress {
+    background: linear-gradient(135deg, #f39c12, #e67e22);
+  }
+  
+  .legend-color.pending {
+    background: linear-gradient(135deg, #3498db, #2980b9);
+  }
+  
+  .legend-item span {
+    font-size: 1.05rem;
+    color: #2d3436;
+  }
+  
+  /* Responsive Tasarım */
+  @media (max-width: 992px) {
+    .calendar-progress-container {
+      grid-template-columns: 1fr;
+    }
+    
+    .timeline-content {
+      padding: 25px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .calendar-title {
+      font-size: 2.2rem;
+    }
+    
+    .calendar-subtitle {
+      font-size: 1.1rem;
+    }
+    
+    .timeline-marker {
+      min-width: 60px;
+      margin-right: 20px;
+    }
+    
+    .timeline-icon-container {
+      width: 60px;
+      height: 60px;
+      font-size: 1.4rem;
+    }
+    
+    .timeline-title {
+      font-size: 1.3rem;
+    }
+    
+    .timeline-description {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .calendar-container {
+      padding: 40px 15px;
+    }
+    
+    .calendar-title {
+      font-size: 1.8rem;
+    }
+    
+    .timeline-item {
+      flex-direction: column;
+    }
+    
+    .timeline-marker {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+    }
+    
+    .progress-stats {
+      flex-direction: column;
+      gap: 20px;
+    }
+    
+    .stat-number {
+      font-size: 2rem;
+    }
+  }
