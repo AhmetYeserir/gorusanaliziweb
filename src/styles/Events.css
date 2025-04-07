@@ -1,0 +1,429 @@
+/* Ana Konteyner */
+.events-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2d3436;
+    background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
+  }
+  
+  /* Başlık Bölümü */
+  .events-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .events-title {
+    font-size: 2.8rem;
+    color: #2c3e50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+  
+  .header-icon {
+    color: #e74c3c;
+    font-size: 2.2rem;
+  }
+  
+  .events-divider {
+    height: 4px;
+    width: 120px;
+    background: linear-gradient(to right, #3498db, #e74c3c);
+    margin: 0 auto 30px;
+    border-radius: 4px;
+  }
+  
+  .events-subtitle {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #636e72;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  
+  /* Filtreler */
+  .events-filters {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+  }
+  
+  .filter-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .filter-group label {
+    font-weight: 600;
+    color: #2c3e50;
+  }
+  
+  .filter-select {
+    padding: 10px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background: white;
+    font-size: 1rem;
+    min-width: 200px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .filter-select:hover {
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+  }
+  
+  .filter-select:focus {
+    outline: none;
+    border-color: #3498db;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+  }
+  
+  /* Öne Çıkan Etkinlikler */
+  .featured-events {
+    margin-bottom: 60px;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .section-icon {
+    color: #e74c3c;
+    font-size: 1.8rem;
+  }
+  
+  .featured-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 30px;
+  }
+  
+  .featured-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .featured-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  }
+  
+  .featured-image {
+    height: 250px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+  }
+  
+  .category-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(231, 76, 60, 0.9);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  .featured-content {
+    padding: 25px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .event-title {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+  
+  .event-meta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  .meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+    color: #636e72;
+  }
+  
+  .meta-icon {
+    color: #3498db;
+  }
+  
+  .event-description {
+    color: #666;
+    line-height: 1.7;
+    margin-bottom: 25px;
+    flex: 1;
+  }
+  
+  .event-button {
+    background: linear-gradient(to right, #3498db, #2980b9);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: auto;
+  }
+  
+  .event-button:hover {
+    background: linear-gradient(to right, #2980b9, #3498db);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4);
+  }
+  
+  .button-icon {
+    font-size: 1rem;
+  }
+  
+  /* Tüm Etkinlikler */
+  .all-events {
+    margin-bottom: 60px;
+  }
+  
+  .events-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+  }
+  
+  .event-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    overflow: hidden;
+  }
+  
+  .event-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  }
+  
+  .featured-event {
+    border-left: 4px solid #e74c3c;
+  }
+  
+  .event-date {
+    min-width: 80px;
+    background: #2c3e50;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .date-day {
+    font-size: 1.8rem;
+    font-weight: 700;
+    line-height: 1;
+  }
+  
+  .date-month {
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  
+  .event-details {
+    padding: 20px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .event-title {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+  
+  .event-meta {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+  }
+  
+  .event-description {
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+  
+  .event-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+  }
+  
+  .event-category {
+    background: #f0f0f0;
+    color: #555;
+    padding: 5px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+  
+  /* Bülten */
+  .events-newsletter {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .events-newsletter h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+  
+  .events-newsletter p {
+    font-size: 1.1rem;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+  
+  .newsletter-form {
+    display: flex;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .newsletter-form input {
+    flex: 1;
+    padding: 15px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    font-size: 1rem;
+  }
+  
+  .newsletter-form input:focus {
+    outline: none;
+  }
+  
+  .newsletter-form button {
+    background: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0 25px;
+    border-radius: 0 8px 8px 0;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .newsletter-form button:hover {
+    background: #c0392b;
+  }
+  
+  /* Responsive Tasarım */
+  @media (max-width: 992px) {
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .events-title {
+      font-size: 2.2rem;
+    }
+    
+    .featured-card {
+      flex-direction: column;
+    }
+    
+    .featured-image {
+      height: 200px;
+    }
+    
+    .events-filters {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .events-container {
+      padding: 40px 15px;
+    }
+    
+    .events-title {
+      font-size: 1.8rem;
+    }
+    
+    .featured-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .event-card {
+      flex-direction: column;
+    }
+    
+    .event-date {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 10px 20px;
+    }
+    
+    .date-day {
+      font-size: 1.5rem;
+    }
+    
+    .newsletter-form {
+      flex-direction: column;
+      gap: 10px;
+    }
+    
+    .newsletter-form input, 
+    .newsletter-form button {
+      border-radius: 8px;
+      width: 100%;
+    }
+  }
