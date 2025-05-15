@@ -1,0 +1,329 @@
+/* Lab.css - Güncellenmiş Versiyon */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --primary: #4361ee;
+  --secondary: #3f37c9;
+  --accent: #4895ef;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --text: #495057;
+}
+
+.lab-page {
+  background-color: #f8fafc;
+  min-height: 100vh;
+  padding: 60px 0;
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  overflow-x: hidden;
+}
+
+.lab-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  color: var(--text);
+}
+
+/* Header Section */
+.lab-header {
+  text-align: center;
+  margin-bottom: 60px;
+  position: relative;
+}
+
+.header-content {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+
+.header-icon {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 20px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 80px;
+  background: var(--primary);
+  border-radius: 50%;
+  box-shadow: 0 10px 20px rgba(67, 97, 238, 0.3);
+  transition: all 0.3s ease;
+}
+
+.header-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 15px 30px rgba(67, 97, 238, 0.4);
+}
+
+.lab-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: var(--dark);
+  margin-bottom: 15px;
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.lab-header h1:after {
+  content: '';
+  position: absolute;
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.header-description {
+  color: var(--text);
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 25px;
+  font-weight: 300;
+}
+
+/* Intro Text */
+.lab-intro {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+  text-align: center;
+  color: var(--text);
+  line-height: 1.7;
+  font-size: 1.1rem;
+  position: relative;
+  border: 1px solid rgba(0,0,0,0.03);
+}
+
+.lab-intro:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  background: linear-gradient(45deg, var(--primary), var(--accent));
+  z-index: -1;
+  border-radius: 18px;
+  opacity: 0.1;
+}
+
+/* Equipment Grid */
+.equipment-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+  position: relative;
+}
+
+.equipment-card {
+  background: white;
+  border-radius: 15px;
+  padding: 35px 30px;
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: white;
+  border: none;
+}
+
+.equipment-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.2);
+  z-index: -1;
+}
+
+.equipment-icon {
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 25px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.equipment-card:hover .equipment-icon {
+  transform: scale(1.1);
+  background: rgba(255,255,255,0.3);
+}
+
+.equipment-card h3 {
+  font-size: 1.5rem;
+  color: white;
+  margin-bottom: 20px;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.equipment-card h3:after {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: rgba(255,255,255,0.5);
+  bottom: 0;
+  left: 0;
+  border-radius: 3px;
+}
+
+.equipment-description {
+  color: rgba(255,255,255,0.9);
+  margin-bottom: 25px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.specs-list h4 {
+  font-size: 1.1rem;
+  color: white;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.specs-list ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.specs-list li {
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.9);
+  position: relative;
+  padding-left: 25px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+}
+
+.spec-icon {
+  margin-right: 10px;
+  font-size: 0.8rem;
+  opacity: 0.8;
+}
+
+/* Footer */
+.lab-footer {
+  text-align: center;
+  color: var(--text);
+  padding: 30px;
+  border-top: 1px solid rgba(0,0,0,0.05);
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.lab-footer a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  position: relative;
+}
+
+.lab-footer a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background: var(--primary);
+  bottom: -2px;
+  left: 0;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.lab-footer a:hover {
+  color: var(--secondary);
+}
+
+.lab-footer a:hover:after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .lab-header h1 {
+    font-size: 2.2rem;
+  }
+  
+  .header-description {
+    font-size: 1.1rem;
+  }
+  
+  .equipment-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .lab-intro {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .lab-page {
+    padding: 40px 0;
+  }
+  
+  .lab-header h1 {
+    font-size: 1.8rem;
+  }
+  
+  .header-icon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+  }
+  
+  .equipment-card {
+    padding: 25px 20px;
+  }
+  
+  .lab-footer {
+    padding: 20px;
+  }
+}

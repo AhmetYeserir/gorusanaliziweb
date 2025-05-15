@@ -113,6 +113,8 @@ const Header = () => {
                   <Link to="/about" className="dropdown-item">{t('about')}</Link>
                   <Link to="/team" className="dropdown-item">{t('team')}</Link>
                   <Link to="/calendar" className="dropdown-item">{t('calendar')}</Link>
+                  <Link to="/project-results" className="dropdown-item">{t('Proje Sonuçları ve Etkileri')}</Link>
+                  
                 </div>
               )}
             </li>

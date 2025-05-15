@@ -9,6 +9,7 @@ import Events from "./pages/Events"; // Etkinlikler sayfası
 import Publications from "./pages/Publications"; // Yayınlar sayfası
 import Lab from "./pages/Lab"; // Laboratuvar sayfası
 import Contact from "./pages/Contact"; // İletişim sayfası
+import ProjectResults from "./pages/Project-results"; // Proje Sonuçları Sayfası
 import './i18n';
 import { useTranslation } from 'react-i18next';
 
@@ -29,6 +30,7 @@ function App() {
         <Route path="/publications" element={<Publications />} />
         <Route path="/lab" element={<Lab />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/project-results" element={<ProjectResults />} />
         {/* 404 Sayfa */}
         <Route path="*" element={<h1>Sayfa Bulunamadı!</h1>} />
       </Routes>

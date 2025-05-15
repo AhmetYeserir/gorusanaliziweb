@@ -64,16 +64,10 @@ const Home = () => {
           <h2 className="home-about-title">Proje Hakkında</h2>
           <div className="home-about-content">
             <p className="home-about-text">
-              "Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak Yapay Zeka ile Tespiti" 
-              projesi, TÜBİTAK-1001 Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı 
-              kapsamında (Proje No: EEEAG-123E386) yürütülmektedir. Bu yenilikçi proje, özel gereksinimli 
-              bireylerin çevrelerindeki canlıları algılama yeteneklerini geliştirmeyi hedeflemektedir.
+              TÜBİTAK-1001 Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı kapsamında desteklenen “Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak Yapay Zeka ile Tespiti” başlıklı proje, deprem arama-kurtarma ekipleri için yenilikçi çözümler üretmeyi hedeflemektedir. Fırat Üniversitesi’nin koordinasyonunda ve Afyon Kocatepe, Bingöl, Dicle ve Adıyaman Üniversitelerinin iş birliğiyle yürütülen bu proje, görüş hattı olmayan (Non-Line-of-Sight, NLOS) görüntüleme teknolojisine odaklanmaktadır. Engellerin arkasındaki nesnelerin tespitine olanak sağlayan bu gelişmekte olan teknoloji, mevcut yöntemlerin uzun sürmesi gibi dezavantajlarını gidermeyi amaçlamaktadır. Bu bağlamda, lazer ve ses dalga yansımalarının yapay zeka ile analiz edilmesine dayalı bir yöntem geliştirilmesi planlanmaktadır.
             </p>
             <p className="home-about-text">
-              Projemiz, İstanbul Üniversitesi Mühendislik Fakültesi ve Türkiye Görme Engelliler Derneği 
-              işbirliğiyle geliştirilmekte olup, 2023 yılından bu yana aktif olarak çalışmalarına devam 
-              etmektedir. Temel amacımız, yapay zeka destekli bir sistemle eğitim süreçlerini daha verimli 
-              hale getirmek ve toplumsal fayda sağlamaktır.
+              Proje, arama-kurtarma ekiplerinin enkaz altındaki bireylere hızlı ve etkili bir şekilde ulaşmasını sağlamayı hedeflemektedir. Geliştirilecek görüş alanı dışında canlı tespit sistemi, kritik olan ilk 72 saat içerisinde daha fazla hayat kurtarılmasına olanak tanıyacaktır. Ayrıca, bu yapay zeka tabanlı yöntem, deprem sonrası arama-kurtarma süreçlerine yeni bir perspektif kazandıracaktır. Proje kapsamında, görüş alanı dışı ortamların analizi ve anlamlandırılmasına yönelik bir laboratuvar kurulmuştur. Bu laboratuvar, lisansüstü öğrencilerin ve nitelikli araştırmacıların yetiştirilmesine katkı sunacaktır. 
             </p>
           </div>
         </div>
