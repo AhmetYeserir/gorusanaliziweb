@@ -19,7 +19,8 @@ const About = () => {
       <div className="about-content">
         <div className="project-card">
           <h2 className="project-title">
-            Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak Yapay Zeka ile Tespiti
+            Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak 
+            Yapay Zeka ile Tespiti
           </h2>
           
           <div className="project-details-grid">
@@ -27,7 +28,8 @@ const About = () => {
               <div className="detail-icon">📋</div>
               <div>
                 <div className="detail-label">Proje Türü</div>
-                <div className="detail-value">TÜBİTAK-1001 Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı</div>
+                <div className="detail-value">TÜBİTAK-1001 Bilimsel ve Teknolojik 
+                  Araştırma Projelerini Destekleme Programı</div>
               </div>
             </div>
             
@@ -77,7 +79,22 @@ const About = () => {
               </ul>
             </div>
           </div>
+                  {/* Güncellenmiş Diyagram Bölümü */}
+        <div className="description-section diagram-section">
+          <h3 className="section-title">
+            <span className="section-icon">📐</span>
+            Deneysel Düzenek Teknik Diyagramı
+          </h3>
           
+          <div className="diagram-container">
+            <img 
+              src={require("../assets/lab-photos/diagram.png")} 
+              alt="Deneysel Düzenek Teknik Diyagramı" 
+              className="project-diagram"
+            />
+
+          </div>
+          </div>
           <div className="description-section">
             <h3 className="section-title">
               <span className="section-icon">⚙️</span>

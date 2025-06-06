@@ -11,82 +11,19 @@ const Publications = () => {
   const publications = [
     {
       id: 1,
-      type: 'journal',
-      title: 'Lazer ve Ses Sinyalleri ile Yapay Zeka Uygulamaları',
-      authors: 'Yeşeriroğlu, A., Türkoğlu, İ.',
-      journal: 'Journal of Advanced Technology',
-      year: 2023,
-      volume: '12',
-      issue: '3',
-      pages: '45-62',
-      doi: '10.1234/56789',
-      abstract: 'Bu çalışmada, lazer ve ses sinyallerinin yapay zeka ile entegrasyonu incelenmiştir. Geliştirilen yöntemlerin performans analizi sunulmuştur.',
-      keywords: ['yapay zeka', 'lazer', 'ses işleme', 'makine öğrenmesi'],
-      pdf: '/publications/makale1.pdf',
-      citations: 24,
-      impactFactor: 3.45
-    },
-    {
-      id: 2,
-      type: 'journal',
-      title: 'Eğitim Teknolojilerinde Yenilikçi Yaklaşımlar',
-      authors: 'Yeşeriroğlu, A., Demir, M., Kaya, S.',
-      journal: 'International Journal of Educational Technology',
-      year: 2023,
-      volume: '8',
-      issue: '2',
-      pages: '112-130',
-      doi: '10.9876/54321',
-      abstract: 'Eğitim teknolojilerinde son dönemde geliştirilen yenilikçi yaklaşımlar karşılaştırmalı olarak değerlendirilmiştir.',
-      keywords: ['eğitim teknolojileri', 'dijital dönüşüm', 'öğrenme yönetim sistemleri'],
-      pdf: '/publications/makale2.pdf',
-      citations: 18,
-      impactFactor: 2.78
-    },
-    {
-      id: 3,
       type: 'conference',
-      title: 'Algılama Yetenekleri ve Yapay Zeka Entegrasyonu',
-      authors: 'Türkoğlu, İ., Yeşeriroğlu, A., Öztürk, A.',
-      conference: 'IEEE International Conference on AI',
-      year: 2023,
-      location: 'İstanbul, Türkiye',
-      date: '15-17 Mayıs 2023',
-      proceedings: 'Proceedings of IEEE ICAI 2023',
-      pages: '234-241',
-      abstract: 'Bu bildiride, çeşitli algılama yeteneklerinin yapay zeka sistemleri ile entegrasyonu ele alınmıştır.',
-      keywords: ['yapay zeka', 'algılama sistemleri', 'sensör ağları'],
-      pdf: '/publications/bildiri1.pdf',
-      award: 'En İyi Bildiri Ödülü'
-    },
-    {
-      id: 4,
-      type: 'conference',
-      title: 'Derin Öğrenme ile Görüntü İşleme Teknikleri',
-      authors: 'Yeşeriroğlu, A., Şahin, E., Demirci, M.',
-      conference: 'Uluslararası Bilgisayar Bilimleri Konferansı',
-      year: 2022,
-      location: 'Ankara, Türkiye',
-      date: '10-12 Kasım 2022',
-      proceedings: 'UBBK 2022 Bildiriler Kitabı',
-      pages: '78-85',
-      abstract: 'Derin öğrenme tabanlı yeni görüntü işleme teknikleri sunulmuş ve performans değerlendirmesi yapılmıştır.',
-      keywords: ['derin öğrenme', 'görüntü işleme', 'konvolüsyonel sinir ağları'],
-      pdf: '/publications/bildiri2.pdf'
-    },
-    {
-      id: 5,
-      type: 'book',
-      title: 'Modern Yapay Zeka Uygulamaları',
-      authors: 'Yeşeriroğlu, A., Türkoğlu, İ., Demir, M.',
-      publisher: 'Bilimsel Yayınlar',
-      year: 2023,
-      edition: '1. Baskı',
-      isbn: '978-605-123-456-7',
-      pages: 342,
-      abstract: 'Bu kitapta, modern yapay zeka uygulamaları teorik temelleriyle birlikte detaylı olarak ele alınmıştır.',
-      keywords: ['yapay zeka', 'makine öğrenmesi', 'derin öğrenme', 'uygulamalı yapay zeka'],
-      pdf: '/publications/kitap1.pdf'
+      title: 'Location Detection of an Object Non Line of Sight with Audio Signal',
+      authors: 'Olgun, N., & Çalışan, M.',
+      conference: '2024 8th International Artificial Intelligence and Data Processing Symposium (IDAP)',
+      year: 2024,
+      location: 'IEEE',
+      date: 'September 2024',
+      proceedings: 'Proceedings of IDAP 2024',
+      pages: '1-4',
+      abstract: 'Bu bildiride, görüş alanı dışında yer alan nesnelerin ses sinyalleri kullanılarak konum tespiti yapılması incelenmiştir.',
+      keywords: ['non line of sight', 'ses sinyali', 'konum tespiti', 'yapay zeka'],
+      pdf: '/publications/real_paper.pdf',
+      doi: '10.1109/IDAP64064.2024.10710798'
     }
   ];
 
@@ -121,53 +58,43 @@ const Publications = () => {
             <div className="header-icon">
               <FaBook />
             </div>
-            <h1>Akademik Yayınlar</h1>
-            <p className="header-description">
-              Proje kapsamında üretilen bilimsel çalışmaların akademik çıktıları
+            <h1>Proje Yayınları</h1>
+            <p className="publications-description">
+              Bu bölümde proje kapsamında üretilen akademik yayınlar listelenmiştir.
             </p>
           </div>
         </header>
 
         <div className="controls-section">
-        <div className="search-filter-container">
-        <div className="search-box">
-          <FaSearch className="search-icon" />
-          <input
-            type="text"
-            placeholder="Başlık, yazar veya anahtar kelime ara..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+          <div className="search-filter-container">
+            <div className="search-box">
+              <FaSearch className="search-icon" />
+              <input
+                type="text"
+                placeholder="Başlık, yazar veya anahtar kelime ara..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+              />
+            </div>
+            
+            <div className="filter-dropdown">
+              <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+                <option value="all">Tüm Yayınlar</option>
+                <option value="conference">Konferans Bildirileri</option>
+              </select>
+              <FaFilter className="filter-icon" />
+            </div>
+          </div>
         </div>
-        
-        <div className="filter-dropdown">
-          <select value={filter} onChange={(e) => setFilter(e.target.value)}>
-            <option value="all">Tüm Yayınlar</option>
-            <option value="journal">Dergi Makaleleri</option>
-            <option value="conference">Konferans Bildirileri</option>
-            <option value="book">Kitaplar</option>
-          </select>
-          <FaFilter className="filter-icon" />
-        </div>
-      </div>
-      </div>
 
         <div className="stats-grid">
           <div className="stat-card total">
             <span className="stat-number">{publicationStats.total}</span>
             <span className="stat-label">Toplam Yayın</span>
           </div>
-          <div className="stat-card journals">
-            <span className="stat-number">{publicationStats.journals}</span>
-            <span className="stat-label">Dergi Makalesi</span>
-          </div>
           <div className="stat-card conferences">
             <span className="stat-number">{publicationStats.conferences}</span>
             <span className="stat-label">Konferans Bildirisi</span>
-          </div>
-          <div className="stat-card books">
-            <span className="stat-number">{publicationStats.books}</span>
-            <span className="stat-label">Kitap</span>
           </div>
         </div>
 
@@ -177,8 +104,7 @@ const Publications = () => {
               <div key={pub.id} className={`publication-card ${pub.type} ${expandedId === pub.id ? 'expanded' : ''}`}>
                 <div className="publication-header">
                   <div className="publication-icon">
-                    {pub.type === 'journal' ? <FaBook /> : 
-                     pub.type === 'conference' ? <BsFillCalendarEventFill /> : <FaBook />}
+                    <BsFillCalendarEventFill />
                   </div>
                   <div className="publication-title-authors">
                     <h3>{pub.title}</h3>
@@ -190,27 +116,11 @@ const Publications = () => {
                 </div>
 
                 <div className="publication-details">
-                  {pub.type === 'journal' && (
-                    <div className="detail-row">
-                      <span className="detail-label">Dergi:</span>
-                      <span className="detail-value">{pub.journal}, Cilt {pub.volume}({pub.issue}), Sayfa {pub.pages}</span>
-                    </div>
-                  )}
-                  
-                  {pub.type === 'conference' && (
-                    <div className="detail-row">
-                      <span className="detail-label">Konferans:</span>
-                      <span className="detail-value">{pub.conference}, {pub.location} ({pub.date})</span>
-                    </div>
-                  )}
-                  
-                  {pub.type === 'book' && (
-                    <div className="detail-row">
-                      <span className="detail-label">Yayınevi:</span>
-                      <span className="detail-value">{pub.publisher}, {pub.edition}, {pub.pages} sayfa</span>
-                    </div>
-                  )}
-                  
+                  <div className="detail-row">
+                    <span className="detail-label">Konferans:</span>
+                    <span className="detail-value">{pub.conference}, {pub.location} ({pub.date})</span>
+                  </div>
+
                   {pub.doi && (
                     <div className="detail-row">
                       <span className="detail-label">DOI:</span>
@@ -219,27 +129,6 @@ const Publications = () => {
                           {pub.doi} <FaExternalLinkAlt className="external-link-icon" />
                         </a>
                       </span>
-                    </div>
-                  )}
-                  
-                  {pub.type === 'journal' && pub.impactFactor && (
-                    <div className="detail-row">
-                      <span className="detail-label">Etki Faktörü:</span>
-                      <span className="detail-value">{pub.impactFactor}</span>
-                    </div>
-                  )}
-                  
-                  {pub.type === 'journal' && pub.citations && (
-                    <div className="detail-row">
-                      <span className="detail-label">Atıf Sayısı:</span>
-                      <span className="detail-value">{pub.citations}</span>
-                    </div>
-                  )}
-                  
-                  {pub.award && (
-                    <div className="detail-row">
-                      <span className="detail-label award">Ödül:</span>
-                      <span className="detail-value award">{pub.award}</span>
                     </div>
                   )}
                 </div>
@@ -294,7 +183,7 @@ const Publications = () => {
               Daha fazla bilgi için lütfen <a href="/contact">iletişim</a> sayfamızı ziyaret edin veya doğrudan e-posta gönderin.
             </p>
             <div className="citation-info">
-              <p>Bu yayınlara atıf yapmak için lütfen orijinal kaynakları kullanınız.</p>
+              <p>Bu yayına atıf yapmak için lütfen orijinal kaynağı kullanınız.</p>
             </div>
           </div>
         </div>

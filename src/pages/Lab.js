@@ -3,6 +3,12 @@ import { FaFlask, FaMicrochip, FaRobot, FaChartLine, FaArrowRight } from 'react-
 import { motion } from 'framer-motion';
 import '../styles/Lab.css';
 
+// Fotoğrafları import edin (örnek isimlendirme ile)
+import labPhoto1 from '../assets/lab-photos/lab 4.jpeg';
+import labPhoto2 from '../assets/lab-photos/lab 1.jpeg';
+import labPhoto3 from '../assets/lab-photos/lab 2.jpeg';
+import labPhoto4 from '../assets/lab-photos/lab 3.jpeg';
+
 const Lab = () => {
   const equipment = [
     {
@@ -79,7 +85,7 @@ const Lab = () => {
     <div className="lab-page">
       <div className="lab-container">
         <header className="lab-header">
-          <div className="header-content">
+          <div className="lab-content">
             <motion.div 
               className="header-icon"
               initial={{ scale: 0 }}
@@ -110,18 +116,7 @@ const Lab = () => {
           </div>
         </header>
 
-        <motion.div 
-          className="lab-intro"
-          initial={{ opacity: 0, scale: 0.9 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ delay: 0.4, duration: 0.5 }}
-        >
-          <p>
-            Araştırmalarımızı yürüttüğümüz laboratuvar ortamı, en son teknoloji ekipmanlarla donatılmış olup
-            yapay zeka, sensör teknolojileri ve veri bilimi alanlarında çığır açan çalışmalara ev sahipliği yapmaktadır.
-          </p>
-        </motion.div>
-
+        {/* Ekipman Kartları */}
         <div className="equipment-grid">
           {equipment.map((item, index) => (
             <motion.div 
@@ -153,6 +148,36 @@ const Lab = () => {
             </motion.div>
           ))}
         </div>
+                <motion.div 
+          className="lab-intro"
+          initial={{ opacity: 0, scale: 0.9 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: 0.4, duration: 0.5 }}
+        >
+          <p>
+            Araştırmalarımızı yürüttüğümüz laboratuvar ortamı, en son teknoloji ekipmanlarla donatılmış olup
+            yapay zeka, sensör teknolojileri ve veri bilimi alanlarında çığır açan çalışmalara ev sahipliği yapmaktadır.
+          </p>
+        </motion.div>
+        
+       {/* Laboratuvar Fotoğrafları */}
+        <div className="lab-photos">
+          <h2>Laboratuvar Fotoğrafları</h2>
+          <div className="lab-photo-grid">
+            {[labPhoto1, labPhoto2, labPhoto3, labPhoto4].map((photo, index) => (
+              <motion.div 
+                key={index}
+                className="lab-photo-item"
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5 }}
+              >
+                <img src={photo} alt={`Laboratuvar Fotoğrafı ${index + 1}`} />
+              </motion.div>
+            ))}
+          </div>
+        </div>
 
         <motion.div 
           className="lab-footer"
@@ -165,6 +190,7 @@ const Lab = () => {
             Laboratuvarımız hakkında daha fazla bilgi için lütfen <a href="/contact">iletişim</a> sayfamızı ziyaret edin.
           </p>
         </motion.div>
+        
       </div>
     </div>
   );

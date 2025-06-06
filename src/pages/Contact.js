@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { FaPaperPlane, FaPhone, FaEnvelope, FaMapMarkerAlt, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaPaperPlane, FaPhone, FaEnvelope, FaMapMarkerAlt, FaChevronDown, FaChevronUp, FaCheckCircle, FaTimesCircle } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import '../styles/Contact.css';
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
@@ -9,6 +10,9 @@ const Contact = () => {
     message: ''
   });
 
+  const [formErrors, setFormErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState(null);
   const [activeIndex, setActiveIndex] = useState(null);
 
   const faqs = [
@@ -35,21 +39,35 @@ const Contact = () => {
       icon: <FaPhone />,
       title: "Telefon",
       content: "+90 555 123 45 67",
-      color: "#5BC0DE" // Açık mavi
+      color: "#5BC0DE"
     },
     {
       icon: <FaEnvelope />,
       title: "E-posta",
-      content: "info@projeadi.com",
-      color: "#D9534F" // Kırmızı
+      content: "info@nlos1001.com",
+      color: "#D9534F"
     },
     {
       icon: <FaMapMarkerAlt />,
       title: "Adres",
-      content: "Teknoloji Parkı, No:123, İstanbul",
-      color: "#5CB85C" // Yeşil
+      content: "Fırat Üniversitesi Teknoloji Fakültesi, Elazığ",
+      color: "#5CB85C"
     }
   ];
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formData.name.trim()) errors.name = "Adınızı giriniz";
+    if (!formData.email.trim()) {
+      errors.email = "E-posta giriniz";
+    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+      errors.email = "Geçerli bir e-posta adresi giriniz";
+    }
+    if (!formData.message.trim()) errors.message = "Mesajınızı giriniz";
+    
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -57,12 +75,49 @@ const Contact = () => {
       ...prev,
       [name]: value
     }));
+    
+    if (formErrors[name]) {
+      setFormErrors(prev => ({
+        ...prev,
+        [name]: null
+      }));
+    }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    alert('Mesajınız başarıyla gönderildi!');
-    setFormData({ name: '', email: '', message: '' });
+    
+    if (!validateForm()) return;
+    
+    setIsSubmitting(true);
+    
+    try {
+      const response = await fetch('https://formspree.io/f/mrbqvqwg', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+          _subject: 'NLOS1001 Web Sitesinden Yeni Mesaj'
+        }),
+      });
+      
+      if (response.ok) {
+        setSubmitStatus('success');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        throw new Error('Form gönderilemedi');
+      }
+    } catch (error) {
+      console.error('Hata:', error);
+      setSubmitStatus('error');
+    } finally {
+      setIsSubmitting(false);
+      setTimeout(() => setSubmitStatus(null), 5000);
+    }
   };
 
   const toggleFAQ = (index) => {
@@ -72,7 +127,6 @@ const Contact = () => {
   return (
     <div className="contact-page">
       <div className="contact-container">
-        {/* Başlık Bölümü */}
         <motion.div 
           className="contact-header"
           initial={{ opacity: 0, y: -20 }}
@@ -86,7 +140,6 @@ const Contact = () => {
         </motion.div>
 
         <div className="contact-content">
-          {/* İletişim Formu ve Bilgiler */}
           <motion.div 
             className="contact-form-section"
             initial={{ opacity: 0, x: -20 }}
@@ -113,43 +166,68 @@ const Contact = () => {
             <form onSubmit={handleSubmit} className="contact-form">
               <h2>Bize Mesaj Gönderin</h2>
               
+              {submitStatus === 'success' && (
+                <motion.div 
+                  className="form-alert success"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <FaCheckCircle className="alert-icon" />
+                  <span>Mesajınız başarıyla gönderildi! En kısa sürede dönüş yapacağız.</span>
+                </motion.div>
+              )}
+              
+              {submitStatus === 'error' && (
+                <motion.div 
+                  className="form-alert error"
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                >
+                  <FaTimesCircle className="alert-icon" />
+                  <span>Bir hata oluştu. Lütfen daha sonra tekrar deneyiniz.</span>
+                </motion.div>
+              )}
+
               <div className="form-group">
-                <label htmlFor="name">Adınız</label>
+                <label htmlFor="name">Adınız *</label>
                 <input 
                   type="text" 
                   id="name" 
                   name="name" 
                   value={formData.name}
                   onChange={handleChange}
-                  required 
+                  className={formErrors.name ? 'error' : ''}
                   placeholder="Adınız ve soyadınız"
                 />
+                {formErrors.name && <span className="error-message">{formErrors.name}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="email">E-posta Adresiniz</label>
+                <label htmlFor="email">E-posta Adresiniz *</label>
                 <input 
                   type="email" 
                   id="email" 
                   name="email" 
                   value={formData.email}
                   onChange={handleChange}
-                  required 
+                  className={formErrors.email ? 'error' : ''}
                   placeholder="email@ornek.com"
                 />
+                {formErrors.email && <span className="error-message">{formErrors.email}</span>}
               </div>
 
               <div className="form-group">
-                <label htmlFor="message">Mesajınız</label>
+                <label htmlFor="message">Mesajınız *</label>
                 <textarea 
                   id="message" 
                   name="message" 
                   value={formData.message}
                   onChange={handleChange}
-                  required 
+                  className={formErrors.message ? 'error' : ''}
                   rows="5"
                   placeholder="Mesajınızı buraya yazın..."
                 ></textarea>
+                {formErrors.message && <span className="error-message">{formErrors.message}</span>}
               </div>
 
               <motion.button 
@@ -157,14 +235,19 @@ const Contact = () => {
                 className="submit-btn"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                style={{ backgroundColor: "#D9534F" }}
+                disabled={isSubmitting}
               >
-                <FaPaperPlane className="send-icon" /> Gönder
+                {isSubmitting ? (
+                  <span>Gönderiliyor...</span>
+                ) : (
+                  <>
+                    <FaPaperPlane className="send-icon" /> Gönder
+                  </>
+                )}
               </motion.button>
             </form>
           </motion.div>
 
-          {/* SSS Bölümü */}
           <motion.div 
             className="faq-section"
             initial={{ opacity: 0, y: 20 }}

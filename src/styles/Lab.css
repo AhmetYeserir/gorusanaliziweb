@@ -1,6 +1,4 @@
-/* Lab.css - Güncellenmiş Versiyon */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
 :root {
   --primary: #4361ee;
   --secondary: #3f37c9;
@@ -9,7 +7,6 @@
   --dark: #212529;
   --text: #495057;
 }
-
 .lab-page {
   background-color: #f8fafc;
   min-height: 100vh;
@@ -17,28 +14,24 @@
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   overflow-x: hidden;
 }
-
 .lab-container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
   color: var(--text);
 }
-
 /* Header Section */
 .lab-header {
   text-align: center;
   margin-bottom: 60px;
   position: relative;
 }
-
-.header-content {
+.lab-content {
   max-width: 800px;
   margin: 0 auto;
   position: relative;
   z-index: 2;
 }
-
 .header-icon {
   font-size: 2.5rem;
   color: white;
@@ -284,7 +277,29 @@
     transform: translateY(-10px);
   }
 }
+.lab-photos h2 {
+  margin-top: 10px;
+  font-size: 2.2rem;
+  margin-bottom: 25px;
+  font-weight: 700;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+  display: inline-block;
+}
 
+.lab-photos h2::after {
+  content: '';
+  position: absolute;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
 /* Responsive Design */
 @media (max-width: 768px) {
   .lab-header h1 {

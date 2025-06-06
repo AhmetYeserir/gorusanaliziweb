@@ -1,60 +1,28 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { animateScroll as scroll } from "react-scroll";
 import { useTranslation } from 'react-i18next';
 import "../styles/Home.css";
-import heroImage from "../assets/image1.webp";
-import heroImage2 from "../assets/image2.jpg";
-import heroImage3 from "../assets/image3.jpg";
-import heroImage4 from "../assets/image4.jpg";
-import heroImage5 from "../assets/image5.jpg";
+import heroImage from "../assets/gorusanalizifoto.jpg";
 
 const Home = () => {
-  const [current, setCurrent] = useState(0);
-  const images = [heroImage, heroImage5, heroImage3, heroImage4];
   const { t } = useTranslation();
-
-  const goToNext = () => {
-    setCurrent((prevState) => (prevState + 1) % images.length);
-  };
-
-  const goToPrevious = () => {
-    setCurrent((prevState) => (prevState === 0 ? images.length - 1 : prevState - 1));
-  };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      goToNext();
-    }, 600000);
-    return () => clearInterval(interval);
-  }, []);
-
   const scrollToTop = () => {
     scroll.scrollToTop({
       duration: 500,
       smooth: "easeInOutQuint",
     });
   };
-
   return (
     <div className="home-page">
-      {/* Carousel Section */}
-      <section className="home-carousel">
-        <div className="carousel-container">
+      <section className="home-hero-section">
+        <div className="hero-image-container">
           <img 
-            src={images[current]} 
-            alt={`carousel ${current}`} 
-            className="carousel-image"
-            loading="lazy"
+            src={heroImage} 
+            alt="Görüş Analizi Projesi" 
+            className="hero-image"
+            loading="eager" // Öncelikli yükleme
           />
-          <div className="carousel-controls">
-            <button className="carousel-prev" onClick={goToPrevious} aria-label="Previous slide">
-              &#10094;
-            </button>
-            <button className="carousel-next" onClick={goToNext} aria-label="Next slide">
-              &#10095;
-            </button>
-          </div>
         </div>
       </section>
 
@@ -64,7 +32,7 @@ const Home = () => {
           <h2 className="home-about-title">Proje Hakkında</h2>
           <div className="home-about-content">
             <p className="home-about-text">
-              TÜBİTAK-1001 Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı kapsamında desteklenen “Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak Yapay Zeka ile Tespiti” başlıklı proje, deprem arama-kurtarma ekipleri için yenilikçi çözümler üretmeyi hedeflemektedir. Fırat Üniversitesi’nin koordinasyonunda ve Afyon Kocatepe, Bingöl, Dicle ve Adıyaman Üniversitelerinin iş birliğiyle yürütülen bu proje, görüş hattı olmayan (Non-Line-of-Sight, NLOS) görüntüleme teknolojisine odaklanmaktadır. Engellerin arkasındaki nesnelerin tespitine olanak sağlayan bu gelişmekte olan teknoloji, mevcut yöntemlerin uzun sürmesi gibi dezavantajlarını gidermeyi amaçlamaktadır. Bu bağlamda, lazer ve ses dalga yansımalarının yapay zeka ile analiz edilmesine dayalı bir yöntem geliştirilmesi planlanmaktadır.
+              TÜBİTAK-1001 Bilimsel ve Teknolojik Araştırma Projelerini Destekleme Programı kapsamında desteklenen "Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak Yapay Zeka ile Tespiti" başlıklı proje, deprem arama-kurtarma ekipleri için yenilikçi çözümler üretmeyi hedeflemektedir. Fırat Üniversitesi'nin koordinasyonunda ve Afyon Kocatepe, Bingöl, Dicle ve Adıyaman Üniversitelerinin iş birliğiyle yürütülen bu proje, görüş hattı olmayan (Non-Line-of-Sight, NLOS) görüntüleme teknolojisine odaklanmaktadır. Engellerin arkasındaki nesnelerin tespitine olanak sağlayan bu gelişmekte olan teknoloji, mevcut yöntemlerin uzun sürmesi gibi dezavantajlarını gidermeyi amaçlamaktadır. Bu bağlamda, lazer ve ses dalga yansımalarının yapay zeka ile analiz edilmesine dayalı bir yöntem geliştirilmesi planlanmaktadır.
             </p>
             <p className="home-about-text">
               Proje, arama-kurtarma ekiplerinin enkaz altındaki bireylere hızlı ve etkili bir şekilde ulaşmasını sağlamayı hedeflemektedir. Geliştirilecek görüş alanı dışında canlı tespit sistemi, kritik olan ilk 72 saat içerisinde daha fazla hayat kurtarılmasına olanak tanıyacaktır. Ayrıca, bu yapay zeka tabanlı yöntem, deprem sonrası arama-kurtarma süreçlerine yeni bir perspektif kazandıracaktır. Proje kapsamında, görüş alanı dışı ortamların analizi ve anlamlandırılmasına yönelik bir laboratuvar kurulmuştur. Bu laboratuvar, lisansüstü öğrencilerin ve nitelikli araştırmacıların yetiştirilmesine katkı sunacaktır. 

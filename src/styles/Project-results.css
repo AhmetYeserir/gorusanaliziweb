@@ -1,19 +1,13 @@
-/* Project-results.css */
-
-/* Base Styles */
 .project-results {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #333;
   line-height: 1.6;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
-
-/* Hero Section */
 .results-hero {
   position: relative;
   height: 400px;
@@ -27,25 +21,21 @@
   color: white;
   margin-bottom: 60px;
 }
-
 .hero-content {
   position: relative;
   z-index: 2;
   max-width: 800px;
   padding: 0 20px;
 }
-
 .results-hero h1 {
   font-size: 3rem;
   margin-bottom: 20px;
   font-weight: 700;
 }
-
 .results-hero p {
   font-size: 1.3rem;
   opacity: 0.9;
 }
-
 /* Section Header */
 .section-header {
   text-align: center;

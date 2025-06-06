@@ -94,7 +94,6 @@ const Events = () => {
           </select>
         </div>
       </div>
-
       <div className="featured-events">
         <h2 className="section-title">
           <MdOutlineFeaturedPlayList className="section-icon" /> Öne Çıkan Etkinlikler

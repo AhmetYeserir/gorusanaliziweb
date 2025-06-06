@@ -60,16 +60,9 @@
   right: 30px;
 }
 
-/* About Section Styles */
-.home-about-section {
-  max-width: 1200px;
-  margin: 50px auto;
-  padding: 0 20px;
-}
-
 .home-about-container {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 30px;
 }
 
 .home-about-title {
@@ -130,13 +123,41 @@
   color: #555;
   margin-bottom: 20px;
 }
+/* Hero Image Section */
+.home-hero-section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0;
+  overflow: hidden;
+}
+
+.hero-image-container {
+  width: 78%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  margin: 20px 0;
+}
 
 /* Goals Section */
 .home-goals-container {
   display: flex;
   justify-content: space-between;
   gap: 30px;
-  margin: 50px 0;
+  margin: 50px 100px;
   animation: fadeIn 0.8s ease-out;
 }
 
@@ -203,8 +224,9 @@
 /* Detail Button */
 .home-about-footer {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 30px;
   animation: fadeIn 1s ease-out;
+  margin-bottom: 50px;
 }
 
 .home-detail-button {
