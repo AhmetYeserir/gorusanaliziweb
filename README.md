@@ -1,70 +1,111 @@
-# Getting Started with Create React App
+# Görüş Analizi Projesi - Tanıtım Web Sitesi
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
+  
+![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)
+![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
+![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
+![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## Available Scripts
+Bu web sitesi, TÜBİTAK-1001 desteğiyle yürütülen “Görüş Alanı Dışındaki Canlıların Lazer ve Ses Sinyalleri Kullanılarak Yapay Zekâ ile Tespiti” projesinin resmi tanıtım platformudur. Proje, aynı zamanda lisans bitirme projem kapsamında hazırlanmıştır.
 
-In the project directory, you can run:
+[🌐 Canlı Site](https://ahmetyeserir.github.io/gorusanaliziweb) • [🚀 Proje Özellikleri](#-proje-özellikleri) • [📁 Proje Yapısı](#-proje-yapısı) • [🛠️ Teknolojiler](#️-kullanılan-teknolojiler) • [📸 Ekran Görüntüleri](#-ekran-görüntüleri)
 
-### `npm start`
+</div>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+---
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Proje Hakkında
 
-### `npm test`
+Bu web sitesi, TÜBİTAK tarafından desteklenen **“Görüş Analizi”** projesinin tanıtımını yapmak amacıyla geliştirilmiştir.  
+Proje, **metin madenciliği** ve **doğal dil işleme** (NLP) teknikleri kullanarak çeşitli platformlardaki görüşleri analiz etmeyi amaçlamaktadır.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
 
-### `npm run build`
+## 🚀 Proje Özellikleri
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- ✅ **Modern ve Duyarlı Tasarım** – Tüm cihazlarda uyumlu
+- ✅ **Kullanıcı Dostu Arayüz** – Kolay gezinme ve anlaşılır içerik
+- ✅ **Proje Tanıtımı** – Detaylı proje açıklamaları ve hedefler
+- ✅ **Ekip Bilgileri** – Projede görev alan ekibin tanıtımı
+- ✅ **İlerleme Durumu** – Proje gelişim sürecinin görselleştirilmesi
+- ✅ **İletişim Formu** – Ziyaretçiler için iletişim imkanı
+- ✅ **Sosyal Medya Entegrasyonu** – Kolay paylaşım ve takip
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 📁 Proje Yapısı
 
-### `npm run eject`
+```
+gorusanaliziweb/
+│
+├── index.html # Ana sayfa
+├── about.html # Hakkında
+├── team.html # Ekip
+├── contact.html # İletişim
+│
+├── css/
+│ ├── style.css # Özel stiller
+│ └── responsive.css# Duyarlı tasarım stilleri
+│
+├── js/
+│ └── script.js # İnteraktif özellikler
+│
+├── images/ # Görseller
+│ ├── logo.png
+│ ├── hero-bg.jpg
+│ └── team/
+│
+└── lib/ # Harici kütüphaneler
+├── bootstrap/
+├── fontawesome/
+└── jquery/
+```
+---
+## 🛠️ Kullanılan Teknolojiler
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- **HTML5** – Semantik yapı
+- **CSS3** – Stil ve animasyonlar
+- **JavaScript** – İnteraktif özellikler
+- **Bootstrap 5** – Responsive framework
+- **Font Awesome** – İkon seti
+- **jQuery** – DOM manipülasyonu
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🎨 Tasarım Özellikleri
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Modern renk paleti  
+- Responsive layout (mobil, tablet, masaüstü)  
+- Kullanıcı dostu ve sezgisel navigasyon  
+- Görsel bütünlük ve tutarlı tipografi  
 
-## Learn More
+---
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 📦 Kurulum ve Kullanım
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Projeyi yerel ortamınızda çalıştırmak için:
 
-### Code Splitting
+```bash
+# Depoyu klonlayın
+git clone https://github.com/AhmetYeserir/gorusanaliziweb.git
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+# Proje klasörüne girin
+cd gorusanaliziweb
+```
+---
+## 👨‍💻 Geliştirici
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+### **Ahmet Yeşeriroğlu**
 
-### Making a Progressive Web App
+[![LinkedIn](https://img.shields.io/badge/📎_LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/ahmetyeserir)
+[![Email](https://img.shields.io/badge/📧_Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:ahmetyeserirogluu@gmail.com)
+[![GitHub](https://img.shields.io/badge/💻_GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/AhmetYeserir)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🙏 Teşekkür
 
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Bu projeyi inceleyen herkese teşekkürler!
